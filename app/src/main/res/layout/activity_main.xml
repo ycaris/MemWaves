@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="100dp"
+        android:text="MemWaves"
+        android:textColor="#93BEFF"
+        android:textSize="50sp" />
+
+    <Button
+        android:background="@drawable/menu_button"
+        android:id="@+id/Puzzle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puzzle"
+        android:textColor="#2944CD"
+        android:layout_marginBottom="100dp" />
+
+    <Button
+        android:background="@drawable/menu_button"
+        android:id="@+id/Achievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Achievement"
+        android:textColor="#2944CD"
+        android:textSize="12sp"
+        android:layout_marginBottom="100dp"/>
+
+    <Button
+        android:id="@+id/Setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_button"
+        android:text="Settings"
+        android:textColor="#2944CD" />
+</androidx.appcompat.widget.LinearLayoutCompat>
