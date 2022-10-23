@@ -2,6 +2,7 @@ package com.example.memwaves;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,7 @@ public class Achievement_board extends AppCompatActivity {
 
     ImageView imageView;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +51,16 @@ public class Achievement_board extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Achievement_board.this, Achievement4.class);
+                startActivity(intent);
+            }
+        });
+
+        //back to main page
+        imageView = findViewById(R.id.back);
+        imageView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(Achievement_board.this, MainActivity.class);
                 startActivity(intent);
             }
         });
