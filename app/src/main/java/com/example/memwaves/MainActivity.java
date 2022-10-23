@@ -11,7 +11,6 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button button;
-    private Button button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +26,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        
+
+        button = (Button) findViewById(R.id.Achievement);
+        button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, Achievement_board.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }

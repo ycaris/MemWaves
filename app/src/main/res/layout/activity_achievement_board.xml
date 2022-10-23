@@ -7,7 +7,7 @@
     tools:context=".Achievement_board"
     android:gravity="center|top"
     android:orientation="vertical"
-    android:background="@drawable/achievement_back">
+    android:background="@drawable/background2">
 
 
     <TextView
@@ -76,8 +76,6 @@
         android:layout_marginRight="150dp"
         android:padding="5dp"
         android:src="@drawable/back_btn" />
-
-
-
+    
 
 </androidx.appcompat.widget.LinearLayoutCompat>
