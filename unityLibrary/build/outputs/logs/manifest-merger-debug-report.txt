@@ -35,6 +35,16 @@ ADDED from /Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/Andr
 		ADDED from /Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:4:127-168
 	android:name
 		ADDED from /Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:4:73-126
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:5:7-8:23
+action#android.intent.action.MAIN
+ADDED from /Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:6:9-61
+	android:name
+		ADDED from /Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:6:17-58
+category#android.intent.category.LAUNCHER
+ADDED from /Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:7:9-69
+	android:name
+		ADDED from /Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:7:19-66
 meta-data#unityplayer.UnityActivity
 ADDED from /Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:9:7-82
 	android:value

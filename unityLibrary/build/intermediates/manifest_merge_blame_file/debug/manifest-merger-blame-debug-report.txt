@@ -66,77 +66,83 @@
 36-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:4:169-205
 37            android:theme="@style/UnityThemeSelector" >
 37-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:4:127-168
-38
-39            <!-- <intent-filter> -->
-40            <!-- <action android:name="android.intent.action.MAIN" /> -->
-41            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-42            <!-- </intent-filter> -->
-43            <meta-data
-43-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:9:7-82
-44                android:name="unityplayer.UnityActivity"
-44-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:9:18-58
-45                android:value="true" />
-45-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:9:59-79
-46            <meta-data
-46-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:10:7-78
-47                android:name="android.notch_support"
-47-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:10:18-54
-48                android:value="true" />
-48-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:10:55-75
-49        </activity>
-50
-51        <meta-data
-51-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:12:5-69
-52            android:name="unity.splash-mode"
-52-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:12:16-48
-53            android:value="0" />
-53-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:12:49-66
-54        <meta-data
-54-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:13:5-74
-55            android:name="unity.splash-enable"
-55-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:13:16-50
-56            android:value="True" />
-56-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:13:51-71
-57        <meta-data
-57-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:14:5-78
-58            android:name="unity.launch-fullscreen"
-58-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:14:16-54
-59            android:value="True" />
-59-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:14:55-75
-60        <meta-data
-60-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:15:5-84
-61            android:name="unity.allow-resizable-window"
-61-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:15:16-59
-62            android:value="False" />
-62-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:15:60-81
-63        <meta-data
-63-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:16:5-81
-64            android:name="notch.config"
-64-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:16:16-43
-65            android:value="portrait|landscape" />
-65-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:16:44-78
-66
-67        <receiver
-67-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:17:5-113
-68            android:name="com.unity.androidnotifications.UnityNotificationManager"
-68-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:17:15-85
-69            android:exported="false" />
-69-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:17:86-110
-70        <receiver
-70-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:18:5-22:16
-71            android:name="com.unity.androidnotifications.UnityNotificationRestartOnBootReceiver"
-71-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:18:15-99
-72            android:enabled="false"
-72-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:18:100-123
-73            android:exported="false" >
-73-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:18:124-148
-74            <intent-filter>
-74-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:19:7-21:23
-75                <action android:name="android.intent.action.BOOT_COMPLETED" />
-75-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:20:9-71
-75-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:20:17-68
-76            </intent-filter>
-77        </receiver>
-78    </application>
-79
-80</manifest>
+38            <intent-filter>
+38-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:5:7-8:23
+39                <action android:name="android.intent.action.MAIN" />
+39-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:6:9-61
+39-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:6:17-58
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:7:9-69
+41-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:7:19-66
+42            </intent-filter>
+43
+44            <meta-data
+44-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:9:7-82
+45                android:name="unityplayer.UnityActivity"
+45-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:9:18-58
+46                android:value="true" />
+46-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:9:59-79
+47            <meta-data
+47-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:10:7-78
+48                android:name="android.notch_support"
+48-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:10:18-54
+49                android:value="true" />
+49-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:10:55-75
+50        </activity>
+51
+52        <meta-data
+52-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:12:5-69
+53            android:name="unity.splash-mode"
+53-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:12:16-48
+54            android:value="0" />
+54-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:12:49-66
+55        <meta-data
+55-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:13:5-74
+56            android:name="unity.splash-enable"
+56-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:13:16-50
+57            android:value="True" />
+57-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:13:51-71
+58        <meta-data
+58-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:14:5-78
+59            android:name="unity.launch-fullscreen"
+59-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:14:16-54
+60            android:value="True" />
+60-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:14:55-75
+61        <meta-data
+61-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:15:5-84
+62            android:name="unity.allow-resizable-window"
+62-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:15:16-59
+63            android:value="False" />
+63-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:15:60-81
+64        <meta-data
+64-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:16:5-81
+65            android:name="notch.config"
+65-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:16:16-43
+66            android:value="portrait|landscape" />
+66-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:16:44-78
+67
+68        <receiver
+68-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:17:5-113
+69            android:name="com.unity.androidnotifications.UnityNotificationManager"
+69-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:17:15-85
+70            android:exported="false" />
+70-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:17:86-110
+71        <receiver
+71-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:18:5-22:16
+72            android:name="com.unity.androidnotifications.UnityNotificationRestartOnBootReceiver"
+72-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:18:15-99
+73            android:enabled="false"
+73-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:18:100-123
+74            android:exported="false" >
+74-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:18:124-148
+75            <intent-filter>
+75-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:19:7-21:23
+76                <action android:name="android.intent.action.BOOT_COMPLETED" />
+76-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:20:9-71
+76-->/Users/janewu/Downloads/vandyhack/MemWaves/unityLibrary/src/main/AndroidManifest.xml:20:17-68
+77            </intent-filter>
+78        </receiver>
+79    </application>
+80
+81</manifest>

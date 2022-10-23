@@ -2,11 +2,12 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recyclerView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Achievement1"
+    android:background="@drawable/achievement_back"
     android:orientation="vertical"
-    android:background="@drawable/achievement_back">
+    tools:context=".Achievement1">
 
 
     <ImageView
@@ -18,12 +19,12 @@
         android:src="@drawable/back_btn"
         tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:layout_marginTop="100dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview1"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_gravity="center"
-        android:src="@drawable/family1"
-        tools:ignore="MissingConstraints"></ImageView>
+        android:layout_marginTop="100dp"
+        tools:ignore="DuplicateIds,MissingConstraints"></androidx.recyclerview.widget.RecyclerView>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

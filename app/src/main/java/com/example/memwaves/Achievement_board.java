@@ -14,6 +14,10 @@ import android.widget.ImageView;
 public class Achievement_board extends AppCompatActivity {
 
     ImageView imageView;
+    ImageView imageView1;
+    ImageView imageView2;
+    ImageView imageView3;
+    ImageView imageView4;
     int score = 100;
 
     @SuppressLint("MissingInflatedId")
@@ -22,9 +26,9 @@ public class Achievement_board extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_achievement_board);
 
-        imageView = findViewById(R.id.a1);
+        imageView1 = findViewById(R.id.a1);
         if(score> 50){
-            imageView.setOnClickListener(new View.OnClickListener() {
+            imageView1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Achievement_board.this, Achievement1.class);
@@ -32,13 +36,13 @@ public class Achievement_board extends AppCompatActivity {
                 }
             });
         }else{
-            setDisabled(imageView);
+            setDisabled(imageView1);
         }
 
 
-        imageView = findViewById(R.id.a2);
+        imageView2 = findViewById(R.id.a2);
         if(score>100){
-            imageView.setOnClickListener(new View.OnClickListener() {
+            imageView2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Achievement_board.this, Achievement2.class);
@@ -46,13 +50,13 @@ public class Achievement_board extends AppCompatActivity {
                 }
             });
         }else{
-            setDisabled(imageView);
+            setDisabled(imageView2);
         }
 
 
-        imageView = findViewById(R.id.a3);
+        imageView3 = findViewById(R.id.a3);
         if (score>150){
-            imageView.setOnClickListener(new View.OnClickListener() {
+            imageView3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Achievement_board.this, Achievement3.class);
@@ -60,13 +64,13 @@ public class Achievement_board extends AppCompatActivity {
                 }
             });
         }else{
-            setDisabled(imageView);
+            setDisabled(imageView3);
         }
 
 
-        imageView = findViewById(R.id.a4);
+        imageView4 = findViewById(R.id.a4);
         if (score>200){
-            imageView.setOnClickListener(new View.OnClickListener() {
+            imageView4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(Achievement_board.this, Achievement4.class);
@@ -74,7 +78,7 @@ public class Achievement_board extends AppCompatActivity {
                 }
             });
         }else{
-            setDisabled(imageView);
+            setDisabled(imageView4);
         }
 
         //back to main page
