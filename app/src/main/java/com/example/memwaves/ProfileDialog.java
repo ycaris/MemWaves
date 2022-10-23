@@ -37,7 +37,7 @@ public class ProfileDialog extends AppCompatDialogFragment {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         String username = editTextUser.getText().toString();
                         String email = editTextEmail.getText().toString();
-                        listener.applyTexts(username,email);
+                        listener.applyTexts(email,username);
 
                     }
                 });

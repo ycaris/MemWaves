@@ -89,6 +89,13 @@ public class UploadImage extends AppCompatActivity {
                 }
             }
         });
+
+        showAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UploadImage.this,ShowActivity.class));
+            }
+        });
     }
 
     @Override
