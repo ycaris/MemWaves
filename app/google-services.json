@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "272619440648",
+    "project_id": "memwaves-88f7f",
+    "storage_bucket": "memwaves-88f7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272619440648:android:81169323244691f9f31fbd",
+        "android_client_info": {
+          "package_name": "com.example.memwaves"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272619440648-vaarf68a5u14jdi0k4to59bbrc964ogg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCH290740do7xRQtMrNjhA0JX26bkZbxnk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272619440648-vaarf68a5u14jdi0k4to59bbrc964ogg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

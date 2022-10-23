@@ -16,6 +16,7 @@ public class Settings extends AppCompatActivity implements ProfileDialog.Profile
     private TextView textEmail;
     private TextView textName;
     private Button update;
+    private Button upload;
     private ImageView back;
 
     @Override
@@ -42,6 +43,17 @@ public class Settings extends AppCompatActivity implements ProfileDialog.Profile
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(Settings.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //upload image
+        //back to main page
+        upload = (Button) findViewById(R.id.button2);
+        upload.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(Settings.this, UploadImage.class);
                 startActivity(intent);
             }
         });

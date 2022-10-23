@@ -21,13 +21,13 @@
         android:textSize="50sp" />
 
     <Button
-        android:background="@drawable/menu_button"
         android:id="@+id/Puzzle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/menu_button"
         android:text="Puzzle"
-        android:textColor="#2944CD"
-        android:layout_marginBottom="100dp" />
+        android:textColor="#3944CD" />
 
     <Button
         android:background="@drawable/menu_button"
