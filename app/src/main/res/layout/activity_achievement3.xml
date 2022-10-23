@@ -4,6 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Achievement3">
+    tools:context=".Achievement3"
+    android:background="@drawable/achievement_back">
+
+
+    <ImageView
+        android:id="@+id/back3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="150dp"
+        android:padding="5dp"
+        android:src="@drawable/back_btn"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:src="@drawable/family3"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="175dp"></ImageView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
