@@ -48,7 +48,6 @@ public class Settings extends AppCompatActivity implements ProfileDialog.Profile
         });
 
         //upload image
-        //back to main page
         upload = (Button) findViewById(R.id.button2);
         upload.setOnClickListener(new View.OnClickListener(){
             @Override

@@ -12,6 +12,7 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -31,10 +32,11 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+
 public class UploadImage extends AppCompatActivity {
 
     private Button upload, showAll;
-    private ImageView imageView;
+    private ImageView imageView, back;
     private ProgressBar progressBar;
     private DatabaseReference root = FirebaseDatabase.getInstance().getReference().child("Image");
     private StorageReference reference = FirebaseStorage.getInstance().getReference();
@@ -54,10 +56,19 @@ public class UploadImage extends AppCompatActivity {
 
         progressBar.setVisibility(View.INVISIBLE);
 
+        // back to previous page
+        back = (ImageView) findViewById(R.id.back_page);
+        back.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(UploadImage.this, Settings.class);
+                startActivity(intent);
+            }
+        });
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
 
                 Intent galleryIntent = new Intent();
                 galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
@@ -80,61 +91,54 @@ public class UploadImage extends AppCompatActivity {
         });
     }
 
-        @Override
-        protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){
-            super.onActivityResult(requestCode, resultCode, data);
-            if(requestCode == 2 && resultCode == RESULT_OK && data != null){
-                imageUri = data.getData();
-                imageView.setImageURI(imageUri);
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 2 && resultCode == RESULT_OK && data != null){
+            imageUri = data.getData();
+            imageView.setImageURI(imageUri);
+        }
+    }
+
+    private void uploadToFireBase(Uri uri){
+        StorageReference fileRef = reference.child(System.currentTimeMillis()+"."+getFileExtenstion(uri));
+        fileRef.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        Model model = new Model(uri.toString());
+                        String modelId = root.push().getKey();
+                        root.child(modelId).setValue(model);
+                        Toast.makeText(UploadImage.this,"Uploaded Successfully",Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.INVISIBLE);
+                    }
+                });
             }
-        }
+        }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
+                progressBar.setVisibility(View.VISIBLE);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                progressBar.setVisibility(View.INVISIBLE);
+                Toast.makeText(UploadImage.this,"Uploading Failed !!",Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
-        private void uploadToFireBase(Uri uri){
-            StorageReference fileRef = reference.child(System.currentTimeMillis()+"."+getFileExtenstion(uri));
-            fileRef.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                        @Override
-                        public void onSuccess(Uri uri) {
-                            Toast.makeText(UploadImage.this,"Uploaded Successfully",Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
-            }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
-                    progressBar.setVisibility(View.VISIBLE);
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    progressBar.setVisibility(View.INVISIBLE);
-                    Toast.makeText(UploadImage.this,"Uploading Failed !!",Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
+    private String getFileExtenstion(Uri mUri){
 
-        private String getFileExtenstion(Uri mUri){
-
-            ContentResolver cr = getContentResolver();
-            MimeTypeMap mime = MimeTypeMap.getSingleton();
-            return mime.getExtensionFromMimeType(cr.getType(mUri));
-        }
-
-
-
-//    ActivityResultLauncher<Intent> startActivityIntent = registerForActivityResult(
-//            new ActivityResultContracts.StartActivityForResult(),
-//            new ActivityResultCallback<ActivityResult>() {
-//                @Override
-//                public void onActivityResult(ActivityResult result) {
-//                    if (result.getResultCode() == Activity.RESULT_OK) {
-//                        imageUri = result.getData();
-//
-//                    }
-//                }
-//            });
+        ContentResolver cr = getContentResolver();
+        MimeTypeMap mime = MimeTypeMap.getSingleton();
+        return mime.getExtensionFromMimeType(cr.getType(mUri));
+    }
 
 
 }
+
+
+
