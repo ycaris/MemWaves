@@ -17,4 +17,13 @@
         android:src="@drawable/back_btn"
         tools:ignore="MissingConstraints" />
 
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:src="@drawable/family3"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="175dp"></ImageView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
